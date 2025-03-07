@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kesie's Wig & Beauty Palace - Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" type="image" href="images/flyer.jpg">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/290c92d8f4.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "n9O7TXyvphmNfhdHz",
+      });
+   })();
+</script>
+
+</head>
+<body>
+        
+    <section class="pages">
+        <nav class="nav">
+            <h1>KESIE'S WIG & BEAUTY PALACE</h1>
+            <div class="navLinks" id="navLinks">
+                <i class="fa-solid fa-circle-xmark" onclick="hideMenu()"></i>
+
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+
+
+        <div class="homepage">
+            <h1>Contact Us</h1>  
+            <p>Below is a map of our location and various ways to get in contact with us.</p>
+        </div>
+    </section>
+
+
+     <!-- Location-->
+     <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31768.270155332546!2d-0.27496795096133186!3d5.5620132427727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf99006217bb61%3A0x801d5dfb5f8e29da!2sLashibi%20CAC!5e0!3m2!1sen!2sgh!4v1740160490058!5m2!1sen!2sgh" width="1000" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     </section>
+
+
+
+        <!-- Start Contact Form-->
+        <section class="contactForm">
+
+            <div class="row">
+
+                <div class="contactCol">
+                    <i class="fa-solid fa-house"></i>
+                <span>
+                    <h5>Kesie's Wig & Beauty Palace</h5>
+                    <p>Accra, Ghana,<br>
+                        P.O. Box 3814,<br>
+                        Tema, Ghana.
+                    </p>
+                </span>
+                </div>
+    
+                <div class="contactCol">
+                    <i class="fa-solid fa-phone"></i>
+                <span>
+                    <h5>024684****</h5>
+                    <p>Monday to Saturday,<br>
+                        8am - 9pm.</p>
+                </span>
+                </div>
+                
+                <div class="contactCol">
+                    <i class="fa-solid fa-envelope"></i>
+                <span>
+                    <h5>kesie'swig&beauty.com</h5>
+                    <p>Monday to Sunday, <br>
+                        24hrs Everyday.</p>
+                </span>
+                </div>
+
+            </div>
+
+            <div class="contactCol">
+                <h5>Feel Free To Send Us A Mail Anytime:</h5>
+                <form onsubmit="send(); return false;">
+                    <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="name" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+                    <textarea placeholder="Message" id="message" name="message" autocomplete="on" required></textarea>
+                    <button type="submit" onclick="send()">Submit</button>
+                </form>
+                
+           </div>
+
+        </div>
+    </section>
+
+        <!-- End Contact Form-->
+
+    
+
+   
+
+
+
+  <!-- Footer Start-->
+  <section class="footer">
+    <p>&copy; 2025 Kesie's Wig & Beauty Palace. All rights Reserved.</p>
+    <div class="social">
+        <a href="#">
+            <i style="color: wheat;" class="fa-solid fa-phone-volume fa-2x"></i>
+        024684****</a>
+        <a href="#">
+            <i class="fab fa-brands fa-whatsapp fa-2x"></i>
+        024684****</a>
+        <a href="https://www.instagram.com/kesie1wigspalace/?hl=en" target="_blank">
+            <i class="fab fa-instagram fa-2x"></i>
+        @Kesie1wigspalace</a>
+        <a href="https://www.tiktok.com/@bernicenanaamakesie?lang=en" target="_blank">
+            <i class="fab fa-brands fa-tiktok fa-2x"></i>
+        @Kesie1wigspalace</a>
+    </div>
+
+ </section>
+    <!-- Footer End-->
+
+
+
+
+    <script>
+
+          function showMenu() {
+           document.querySelector('.navLinks').style.display = 'block';
+       }
+       function hideMenu() {
+           document.querySelector('.navLinks').style.display = 'none';
+       }
+
+
+       function send() {
+       var templateParams = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+      };
+  
+     emailjs.send('service_omr4s1w', 'template_1obfbub', templateParams).then(
+        (response) => {
+            alert('SUCCESS!', response.status, response.text);
+        },
+        (error) => {
+            alert('FAILED...', error);
+        }
+     );
+       }
+
+
+    </script>
+    
+</body>
+</html>
