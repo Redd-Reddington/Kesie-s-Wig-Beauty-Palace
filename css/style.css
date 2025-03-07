@@ -1,0 +1,434 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Smooch Sans', sans-serif;
+}
+
+.header{
+    width: 100%;
+    height: 100vh; 
+    background-image:linear-gradient(rgba(2, 5, 18, 0.7),rgb(4, 9, 30,0.7)), url(../images/pic2.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+/* --- This CSS is for other pages apart from HOME --- */
+.pages{
+    width: 100%;
+    min-height: 40vh; 
+    background-image:linear-gradient(rgba(2, 5, 18, 0.7),rgb(4, 9, 30,0.7)) , url(../images/pic2.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+    padding: 8px 6px;
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+nav h1{
+    width: 200px;
+    color: darkorange;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: red;
+    margin: auto;
+    display: block;
+    transition: 0.5s;
+    
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+   
+}
+
+.homepage{
+    text-align: center;
+    color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    
+}
+
+.homepage h1{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.homepage p{
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.fa-solid.fa-circle-xmark{
+    display: none;                                           
+}
+
+.fa-solid.fa-bars{
+    display: none;
+}
+
+
+/* --- Service Start --- */
+
+.services{
+    width: 80%;
+    text-align: center;  
+    margin: auto;
+    padding: 100px;
+}
+
+.services h1{
+    font-size: 50px;
+    font-weight: 600;
+    
+}
+
+.services h3{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.serviceCol ul{
+    font-size: 25px;
+    margin-top: 10px;
+    color: gray;
+    padding: 10px;
+    list-style: none;
+}
+
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.serviceCol{
+    background-color: #fff3f3;
+    border-radius: 10px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    flex-basis: 30%;
+}
+
+/* --- Service end --- */
+
+
+/* --- Beauty start --- */
+
+.beauty{
+    width: 80%;
+    text-align: center;  
+    margin: auto;
+    padding: 50px;
+}
+
+.beauty h1{
+    font-size: 50px;
+    font-weight: 600;
+    
+}
+
+.beauty p{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.beautyCol{
+    flex-basis: 30%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    overflow: hidden ;
+}
+
+.beautyCol img{
+    width: 100%;
+    height: 75%;
+    border-radius: 10px;
+                                
+}
+
+.base{
+    width: 100%;
+    top: 20px;
+}
+
+.base h3{
+    font-size: 30px;
+    font-weight: 800;
+    font-style: italic;
+    color: black;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.beautyCol:hover{
+    background-color: red;
+
+    animation-name: rotate;
+    animation-duration: 3s;
+
+}
+
+@keyframes rotate{
+    from {transform: rotateX(0deg);}
+    to {transform: rotateX(360deg);}   
+}
+
+
+/* --- Beauty end --- */
+
+
+/* --- Charmer Start --- */
+
+.charmer{
+    width: 80%;
+    text-align: center;  
+    margin: auto;
+    margin-bottom: 5px;
+    padding: 50px;
+}
+
+.charmer h1{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.charmer h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.charmer h3{
+    font-size: 25px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.charmer p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.charmerCol{
+    flex-basis: 32%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: left;
+    margin-bottom: 5%;
+    overflow: hidden;
+    
+}
+
+.charmerCol img{
+    width: 100%; 
+    height: 75%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.charmerCol h3{
+    text-align: center;
+}
+
+/* --- Charmer End --- */
+
+
+/* --- Footer Start --- */
+
+.footer{
+    background-image:linear-gradient(rgba(2, 5, 18, 0.7),rgb(4, 9, 30,0.7)) , url(../images/pic2.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    font-size: 25px;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.fab{
+    color: wheat;
+    
+}
+
+.social a{
+    margin: 20px;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+
+/* --- Footer End --- */
+
+
+/* --- Contact Page Start---*/
+
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px;
+
+}
+
+.contactForm{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.contactForm .contactCol{
+    flex-basis: 30%;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+
+}
+
+.contactCol div{
+    display: flex;
+}
+
+.contactCol form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contactCol input,.contactCol textarea{
+    font-size: 20px;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    outline: none;
+   
+}
+
+.contactCol button{
+    padding: 15px 30px;
+    background-color: #f98b8b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    transition: all 0.5s ease;
+
+}
+
+
+.contactCol button:hover {
+    background-color: #FF4500; /* Change background color on hover */
+    color: #000; /* Change text color on hover */
+    transform: scale(1.1); /* Slightly increase the button size */
+}
+
+
+/* --- Contact Page End --- */
+
+
+
+/*--- Mobile View Start---*/
+@media (max-width:768px) {
+
+    .row{
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .homepage h1{
+        font-size: 1.6em;
+
+    }
+
+    .homepage p{
+        font-size: 1em;
+    }
+
+    nav ul li{
+        display: block;
+    }
+
+    .navLinks{
+        display: none;
+        background-color: rgb(193, 193, 67);
+        width: 200px;
+        margin: 0px;
+        top: 0px;
+        padding: 10px;
+        right: 0px;
+        z-index: 2px;
+        position: absolute;
+        
+       
+    }
+
+    .fa-solid.fa-circle-xmark{
+        display: block;
+        color: whitesmoke;
+        cursor: pointer;
+
+    }
+
+    .fa-solid.fa-bars{
+        display: block;
+        color: whitesmoke;
+        cursor: pointer;
+
+    }
+
+    .charmer iframe{
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer{
+        font-size: 20px;
+    }
+
+    .social a{
+        margin: 10px;
+        color: white;
+        font-size: 15px;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+    
+
+}
+
+/*--- Mobile View End ---*/
